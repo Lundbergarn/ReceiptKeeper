@@ -1,0 +1,33 @@
+{
+  "name": "kvittosparare",
+  "version": "1.0.0",
+  "description": "shoppingkvitton",
+  "main": "server.js",
+  "scripts": {
+    // "client-install": "npm install --prefix client",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    // "client": "npm start --prefix client",
+    // "dev": "concurrently \"npm run server\" \"npm run client\"",
+    // "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "author": "christoffer",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "concurrently": "^3.6.0",
+    "cors": "^2.8.5",
+    "express": "^4.16.3",
+    "fs": "0.0.1-security",
+    "mongoose": "^5.1.6",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^8.4.0",
+    "validator": "^10.9.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  },
+  "engines": {
+    "node": "10.15.0"
+  },
+}

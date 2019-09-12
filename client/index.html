@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Receipt Saver</title>
+
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" crossorigin="anonymous">
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+  <!-- Message MODAL  -->
+  <div id="messageModal" class="modal">
+    <div class="modal-content">
+      <h3 class="center">Message</h3>
+      <div class="row">
+        <p class="error"></p>
+      </div>
+      <div class="center">
+        <button class="btn waves-effect waves-light" id="messageBtn">Close
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Search MODAL  -->
+  <div id="searchModal" class="modal">
+    <div class="modal-content">
+      <h3 class="center">Search</h3>
+      <div class="row">
+        <div class="input-field col s12">
+          <input placeholder="Receipt" id="searchInput" type="text" class="input-text">
+        </div>
+      </div>
+      <div class="center">
+        <button class="btn waves-effect waves-light" type="submit" name="action" id="search">Search
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- LOGIN MODAL  -->
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <h3 class="center">Login</h3>
+      <div class="row">
+        <div class="input-field col s12">
+          <input placeholder="Email" id="email" type="email" class="validate input-text" required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input placeholder="Password" id="password" type="password" class="validate input-text" required>
+        </div>
+      </div>
+      <div class="center">
+        <button class="btn waves-effect waves-light" type="submit" name="action" id="login">Login
+        </button>
+        <a class=" waves-effect waves-light btn modal-trigger" href="#createAccModal">New Account</a>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- CREATE ACCOUNT MODAL  -->
+  <div id="createAccModal" class="modal">
+    <div class="modal-content">
+      <h3 class="center">Create account</h3>
+      <div class="row">
+        <div class="input-field col s12">
+          <input placeholder="Firstname" id="firstnameCreate" type="text" class="validate input-text" required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input placeholder="Email" id="emailCreate" type="email" class="validate input-text" required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input placeholder="Password" id="passwordCreate" type="password" class="validate input-text" required>
+        </div>
+        <div class="input-field col s12">
+          <input placeholder="Password confirm" id="passwordCreateConfirm" type="password" class="validate input-text"
+            required>
+        </div>
+      </div>
+      <div class="center">
+        <button class="btn waves-effect waves-light" type="submit" name="action" id="createAcc">Create
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- NAVBAR -->
+  <nav class="center">
+    <div class="nav-wrapper cyan darken-3">
+      <a class="brand-logo left" href="#">Receipt Saver</a>
+      <div class="right">
+
+        <a class="waves-effect waves-light btn modal-trigger right inactive active-log" href="#loginModal"
+          id="loginModalHandle">Login</a>
+
+        <a class="waves-effect waves-light btn right inactive-log" id="logoutModalHandle">Log Out</a>
+
+        <a class="waves-effect waves-light btn modal-trigger right" disabled href="#searchModal"
+          id="searchModalHandle"><i class="fas fa-search"></i></a>
+
+      </div>
+    </div>
+  </nav>
+
+  <!-- MAIN  -->
+  <main>
+
+    <div id="inputContainer">
+      <div class="row">
+        <div class="input-field col s12">
+          <input placeholder="Type titel" id="imageTitel" type="text" class="validate input-text">
+        </div>
+      </div>
+
+      <div class="center">
+        <a id="saveImageBtn" class="waves-effect waves-light btn">Save Image</a>
+        <a id="showImagesBtn" class="waves-effect waves-light btn">Show All Images</a>
+      </div>
+    </div>
+
+
+
+    <br>
+    <div id="img-container" class="row">
+
+      <div class="center">
+        <img id="inputImage" src="#" alt="" />
+
+        <img id="imageP" src="" alt="">
+      </div>
+
+      <div id="allImg"></div>
+
+    </div>
+
+    <div class="add-container">
+      <label id="btn-new-image" class="btn-floating btn-large waves-effect waves-light  deep-orange accent-2">
+        <i class="material-icons">+</i>
+        <input type="file" accept="image/*;capture=camera" id="imageInput" disabled>
+      </label>
+    </div>
+
+
+  </main>
+
+
+  <footer class="page-footer cyan darken-3">
+    <div class="footer-copyright">
+
+      <!-- <a class="waves-effect waves-light btn" href="images.html" id="">Images</a> -->
+
+    </div>
+  </footer>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

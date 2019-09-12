@@ -1,0 +1,176 @@
+html, body{
+  height: 100vh;
+}
+main {
+  max-width: 700px;
+  margin: 0 auto;
+  padding-top: 80px;
+}
+nav{
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  height: 57px;
+}
+nav .brand-logo {
+  left: 10px;
+}
+.nav-wrapper div {
+  margin-top: 13px;
+}
+input {
+  display: none;
+}
+.input-text{
+  display: block;
+}
+
+#inputContainer {
+  display: none;
+}
+
+img{
+  /* max-width: 330px; */
+  width: 100%;
+  overflow: hidden;
+}
+.card {
+  margin: 10px;
+}
+.card p {
+  padding-top: 10px;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 600;
+  margin: 0;
+}
+article{
+  background-color: #eee;
+}
+
+.row{
+  margin: 0 auto;
+}
+.input-field{
+  justify-items: center;
+}
+
+.nav-wrapper div {
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+
+@media only screen and (max-width: 992px){
+nav .brand-logo {
+    font-size: 1.75rem;
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+  }
+}
+
+label.cameraButton {
+  display: inline-block;
+  margin: 1em 0;
+
+  /* Styles to make it look like a button */
+  padding: 0.5em;
+  border: 2px solid #666;
+  border-color: #EEE #CCC #CCC #EEE;
+  background-color: #DDD;
+}
+
+/* Look like a clicked/depressed button */
+label.cameraButton:active {
+  border-color: #CCC #EEE #EEE #CCC;
+}
+
+/* This is the part that actually hides the 'Choose file' text box for camera inputs */
+label.cameraButton input[accept*="camera"] {
+  display: none;
+}
+
+.modal-content h3 {
+  font-size: 2rem;
+}
+
+.modal-content .btn {
+  margin-top: 10px;
+}
+
+#allImg{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+#img-container{
+  margin-bottom: 80px;
+}
+
+img {
+  /* width: 100%; */
+  padding: 10px;
+}
+
+
+@media only screen and (max-width: 992px) {
+  nav .brand-logo.left {
+    left: 10px;
+  }
+}
+
+.btn{
+  margin: 0 4px;
+}
+.add-container{
+  margin: 0 auto 70px auto;
+  text-align: center;
+}
+#btn-new-image {
+  position: fixed;
+  bottom: 20px;
+  transform: translateX(-28px)
+}
+
+.page-footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+.page-footer .footer-copyright {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-right: 10px;
+  min-height: 30px;
+}
+
+.inactive-log, .inactive {
+  display: none;
+}
+.active-log {
+  display: block;
+}
+
+nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
+  line-height: 38px;
+}
+
+
+.error {
+  color: red;
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-align: center;
+  /* margin: 0; */
+}
+
+#messageModal {
+  top: 150px;
+  z-index: 100000;
+}
+
+.modal {
+  max-height: 100%;
+}
