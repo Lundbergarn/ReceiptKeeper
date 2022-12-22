@@ -17,7 +17,7 @@
     "fs": "0.0.1-security",
     "mongoose": "^5.1.6",
     "bcryptjs": "^2.4.3",
-    "jsonwebtoken": "^8.4.0",
+    "jsonwebtoken": "^9.0.0",
     "validator": "^10.9.0"
   },
   "devDependencies": {
